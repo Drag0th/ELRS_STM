@@ -1,8 +1,9 @@
 #include <Arduino.h>
 #include "CRC.h"
 #include "CRSF.h"
+#include "UART.h"
 
-HardwareSerial Serial(PA9);
+
 
 void setup() {
 

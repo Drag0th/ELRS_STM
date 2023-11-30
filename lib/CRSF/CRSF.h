@@ -7,4 +7,15 @@
 
 #define SERIAL_BAUDRATE 115200
 
+#define CRSF_ADDRESS_CRSF_TRANSMITTER 0xEE
+#define CRSF_ADDRESS_RADIO_TRANSMITTER 0xEA
+#define CRSF_ADDRESS_BROADCAST 0x00;
+
+#define CRSF_FRAMETYPE_DEVICE_PING 0x28
+#define CRSF_FRAMETYPE_PARAMETER_WRITE 0x2D
+
+
 int rc_channels[CRSF_MAX_CHANNEL];
+
+void CRSF_Send(uint8_t crsf_packet[], uint8_t length);
+void CRSF_Request_ELRS_Info();

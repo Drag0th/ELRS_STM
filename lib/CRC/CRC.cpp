@@ -1,6 +1,6 @@
 #include "CRC.h"
 
-void CRC_8::setup_CRC_table(){
+void Setup_CRC_Table(){
     for(int i = 0 ; i < 256 ; i++){
         uint8_t crc = i;
         for (uint8_t j = 0; j < 8; j++)
@@ -18,7 +18,7 @@ void CRC_8::setup_CRC_table(){
     }
 }
 
-uint8_t CRC_8::calculate(uint8_t *data, uint8_t length){
+uint8_t Calculate_CRC(uint8_t *data, uint8_t length){
     uint8_t crc = 0;
     while (length--)
     {
