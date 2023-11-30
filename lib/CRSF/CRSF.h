@@ -1,0 +1,10 @@
+#pragma once
+
+#define CRSF_CHANNEL_VALUE_MIN 172
+#define CRSF_CHANNEL_VALUE_MAX 1811
+
+#define CRSF_MAX_CHANNEL 16
+
+#define SERIAL_BAUDRATE 115200
+
+int rc_channels[CRSF_MAX_CHANNEL];

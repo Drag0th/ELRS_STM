@@ -1,22 +1,19 @@
 #include <Arduino.h>
 #include "CRC.h"
+#include "CRSF.h"
 
-// put function declarations here:
-int myFunction(int, int);
-CRC_8 eee;
-
+HardwareSerial Serial(PA9);
 
 void setup() {
-  // put your setup code here, to run once:
-  eee.setup_CRC_table();
-  int result = myFunction(2, 3);
+
+  Serial.begin(SERIAL_BAUDRATE);
+
+  for(int i = 0 ; i < CRSF_MAX_CHANNEL ; i++){
+    rc_channels[i] = CRSF_CHANNEL_VALUE_MIN;
+  }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
